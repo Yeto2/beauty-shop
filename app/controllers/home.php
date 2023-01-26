@@ -6,7 +6,7 @@ class Home extends Controller{
     
         $data["page_tittle"] = "Home";
 
-        $this-> view("home" , $data);
+        $this-> view("beauty-shop/index" , $data);
     }
 }
 
