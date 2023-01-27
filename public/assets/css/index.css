@@ -1,0 +1,13 @@
+/* nav */
+ul.navbar-nav {
+    width: 100%;
+}
+li.nav-item.iii {
+    position: absolute;
+    right: 0;
+}
+/* footer */
+.container.footer {
+    position: relative;
+    bottom: 0px;
+}
