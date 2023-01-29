@@ -6,6 +6,15 @@ li.nav-item.iii {
     position: absolute;
     right: 0;
 }
+/* hero section */
+.carousel-item{
+    height: 100vh;
+    background: #abadac;
+}
+.carousel-caption{
+    top:37%;
+}
+
 /* footer */
 .container.footer {
     position: relative;
