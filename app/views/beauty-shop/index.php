@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/fc8080f1e4.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/fc8080f1e4.js" crossorigin="anonymous"></script>
+    <!-- css file -->
     <link rel="stylesheet" href="<?=ASSETS?>css/index.css">
     <title>She | <?=$data["page_tittle"]?></title>
 </head>
@@ -30,13 +39,22 @@
             <a class="nav-link" href="#">Pricing</a>
         </li>
         <li class="nav-item iii">
-            <a class="nav-link" href="#">Pricing</a>
+        <i class="fa-solid fa-language"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+            <div class="dropdown">
+              <div class="dropbtn"><i class="fa-solid fa-user"></i></div>
+                <div class="dropdown-content">
+                  <a href="#">Sign In</a>
+                  <a href="#">Register</a>
+              </div>
+            </div>
         </li>
         </ul>
     </div>
     </div>
     </nav>
 <!-- end navbar -->
+
 <!-- start hero -->
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -46,31 +64,35 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item">
+      <img class="first-hero" src="<?=ASSETS?>images/hero1.jpg" alt="">
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <h1>Get up to 30% Off New Arrivals.</h1>
+            <p><a class="btn btn-lg btn-primary" href="#">SHOP NOW</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item active">
-        <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg> -->
-        <img src="<?=ASSETS?>images/hero.jpg" alt="" srcset="">
+        <img class="middle-hero" src="<?=ASSETS?>images/hero2.png" alt="">
         <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          <div class="carousel-caption text-middle">
+            <h1>Newsletter.</h1>
+            <p>Subscribe to our newsletter and get 20% off your first purchase</p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
+      <img class="last-hero" src="<?=ASSETS?>images/hero3.png" alt="">
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <h1>Deal Of The Week</h1>
+            <div class="timmer">
+              <p class="ellipse">8</p>
+              <p class="ellipse">12</p>
+              <p class="ellipse">22</p>
+              <p class="ellipse">33</p>
+            </div>
+            <p><a class="btn btn-lg btn-primary" href="#">SHOP NOW</a></p>
           </div>
         </div>
       </div>
