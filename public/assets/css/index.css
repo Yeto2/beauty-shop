@@ -10,6 +10,9 @@ li.nav-item.iii {
     display: flex;
     align-items: center;
 }
+li.nav-item.iii i {
+    padding-right: 20px;
+}
 /* -------- */
 
 .dropdown {
@@ -20,7 +23,7 @@ li.nav-item.iii {
 .dropdown-content {
     display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -35,10 +38,16 @@ li.nav-item.iii {
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
-
+.dropdown::after {
+    content: "";
+    height: 96px;
+    width: 106px;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
 .dropdown:hover .dropdown-content {display: block !important;}
 
-/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 /* -------- */
 /* hero section */
 .carousel-item{
@@ -49,7 +58,8 @@ li.nav-item.iii {
     color: black;
 }
 .text-middle{
-    top: 5%;
+    top: 30%;
+    right: -200px;
 }
 .text-start {
     top: 40%;
@@ -68,9 +78,11 @@ img.first-hero {
 }
 img.middle-hero {
     width: 100%;
-    top: -60px;
+    top: -100px;
     position: absolute;
+    left: -260px;
 }
+
 img.last-hero {
     height: 100%;
     position: absolute;
@@ -95,8 +107,53 @@ p.ellipse {
     margin: 3px;
     font-weight: 700;
 }
+/* blog */
+section#blog {
+    padding: 50px 0px;
+}
+.section-header {
+    margin: 50px 0px;
+    text-align: center;
+    color: #5f5b57;
+}
+.single-blog-txt h2 a {
+    text-transform: initial;
+    margin: 15px 0px;
+    color: #5f5b57;
+    display: inline-block;
+    text-decoration: none;
+    color: #616060;
+    font-size: 16px;
+    padding: 0;
+    font-weight: 500;
+}
+.single-blog-txt h3, .single-blog-txt h3 a {
+    color: #bcb7b2;
+    font-size: 14px;
+    font-weight: 400;
+}
+.single-blog-txt p {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #95908b;
+}
+.single-blog-img {
+    position: relative;
+    overflow: hidden;
+}
+.single-blog-img img {
+    width: auto;
+    height: auto;
+}
 /* footer */
 .container.footer {
     position: relative;
     bottom: 0px;
+}
+.footer {
+    background: #161515de;
+    color: white;
+}
+.col-6.col-md-2.mb-3 ul li a {
+    color: #8f8d8d !important;
 }
