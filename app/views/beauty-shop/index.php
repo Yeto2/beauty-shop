@@ -59,7 +59,28 @@
     </button>
   </div>
 <!-- end hero -->
-
+<!-- start new arrival -->
+<section class="container arrivals">
+	<div class="categories">
+		<ul>
+			<li class="item">All</li>
+			<li class="item">Clotes</li>
+			<li class="item">Accessories</li>
+			<li class="item">MakeUp</li>
+			<li class="item">Newest</li>
+		</ul>
+	</div>
+	<div class="products">
+		<div class="product">
+			<img src="" alt="" srcset="">
+			<div class="prod-info">
+				<p class="prod-name">alice</p>
+				<p class="prod-price">$$</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end new arrival -->
 <!-- start blog -->
 <section id="blog" class="blog container">
 			<div class="container">

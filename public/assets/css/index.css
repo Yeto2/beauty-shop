@@ -107,6 +107,11 @@ p.ellipse {
     margin: 3px;
     font-weight: 700;
 }
+/*-------------- */
+
+
+
+/* ------------- */
 /* blog */
 section#blog {
     padding: 50px 0px;
@@ -144,6 +149,28 @@ section#blog {
 .single-blog-img img {
     width: auto;
     height: auto;
+}
+.single-blog {
+    position: relative;
+    transition-delay: 2s;
+
+}
+
+.single-blog-txt h2 a {
+    color: #f9f9f9 !important;
+}
+.single-blog-txt {
+    position: absolute;
+    top: 0;
+    z-index: 7;
+    background: #484745f2;
+    margin: 22px;
+    padding: 4px;
+    display: none;
+}
+.single-blog:hover .single-blog-txt{
+    display: block;
+    
 }
 /* footer */
 .container.footer {
