@@ -60,26 +60,34 @@
   </div>
 <!-- end hero -->
 <!-- start new arrival -->
-<section class="container arrivals">
-	<div class="categories">
-		<ul>
-			<li class="item">All</li>
-			<li class="item">Clotes</li>
-			<li class="item">Accessories</li>
-			<li class="item">MakeUp</li>
-			<li class="item">Newest</li>
-		</ul>
+<section class="container">
+	<div class="section-header">
+					<h2>New Arrivals</h2>
 	</div>
-	<div class="products">
-		<div class="product">
-			<img src="" alt="" srcset="">
-			<div class="prod-info">
-				<p class="prod-name">alice</p>
-				<p class="prod-price">$$</p>
-			</div>
-		</div>
+	<div class="ctrl">
+		<button class="ctrl-btn pro-prev"><</button>
+		<button class="ctrl-btn pro-next">></button>
 	</div>
+<div class="slider" id="slider">
+	
+	<div class="slide" id="slide">
+		<img class="item" src="<?=ASSETS?>images/products/product1.png">
+		<img class="item" src="<?=ASSETS?>images/products/product2.png">
+		<img class="item" src="<?=ASSETS?>images/products/product3.png">
+		<img class="item" src="<?=ASSETS?>images/products/product4.png">
+		<img class="item" src="<?=ASSETS?>images/products/product5.png">
+		<img class="item" src="<?=ASSETS?>images/products/product6.png">
+		<img class="item" src="<?=ASSETS?>images/products/product7.png">
+		<img class="item" src="<?=ASSETS?>images/products/product8.png">
+		<img class="item" src="<?=ASSETS?>images/products/product9.png">
+		<img class="item" src="<?=ASSETS?>images/products/product10.png">
+		
+	</div>
+	<button type="submit" class="btn btn-success">Discover More !</button>
 </section>
+	
+	
+</div>
 <!-- end new arrival -->
 <!-- start blog -->
 <section id="blog" class="blog container">

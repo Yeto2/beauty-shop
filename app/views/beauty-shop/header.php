@@ -15,6 +15,10 @@
     <script src="https://kit.fontawesome.com/fc8080f1e4.js" crossorigin="anonymous"></script>
     <!-- css file -->
     <link rel="stylesheet" href="<?=ASSETS?>css/index.css">
+    <!-- jquery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
     <title>She | <?=$data["page_tittle"]?></title>
 </head>
 <body>

@@ -109,6 +109,70 @@ p.ellipse {
 }
 /*-------------- */
 
+.categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+li.item {
+    background: #f3e6be;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+section.container.arrivals {
+    padding: 50px 0px;
+}
+.categories {
+    margin-bottom: 40px;
+}
+.product {
+    width: 234px;
+    margin: 11px 0px;
+    padding: 11px;
+    background: #cbcbcb36;
+    border: 1px solid #c5c4c1ad;
+}
+.product img {
+    overflow: hidden;
+    width: 200px;
+    cursor: zoom-in;
+}
+.prod-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p.prod-name {
+    font-size: 23px;
+}
+.price {
+    display: flex;
+}
+p.new-price {
+    font-style: italic;
+    font-weight: 300;
+}
+p.old-price {
+    padding-left: 14px;
+    font-size: smaller;
+    text-decoration-line: line-through;
+}
+.price p {
+    margin: 0;
+}
+p.dsc {
+    font-size: smaller;
+    color: #565656;
+    margin: 0;
+    text-align: center;
+}
+
 
 
 /* ------------- */
@@ -172,6 +236,86 @@ section#blog {
     display: block;
     
 }
+
+/* ----arrivals pages---- */
+section.container {
+    position: relative;
+}
+.ctrl button {
+    text-align: center;
+    color: black;
+    font-size: xxx-large;
+    font-weight: 600;
+}
+.ctrl {
+    text-align: center;
+    margin-top: 5px;
+    position: absolute;
+    top: 183px;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    left: 0px;
+}
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider .slide {
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: 0.3s left ease-in-out;
+    background: #e3e3e336;
+  }
+  
+  .slider .item {
+    margin-right: 10px;
+  }
+  
+  .slider .item:last-child {
+    margin-right: 0;
+  }
+  
+  .ctrl {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .ctrl-btn {
+    padding: 20px 20px;
+    min-width: 50px;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+  
+    position: absolute;
+    top: 50%;
+    margin-top: -27.5px;
+  }
+  
+  .ctrl-btn.pro-prev {
+    left: 0;
+  }
+  
+  .ctrl-btn.pro-next {
+    right: 0;
+  }
+  
+/* ((-------------------- */
+
 /* footer */
 .container.footer {
     position: relative;
