@@ -47,8 +47,8 @@
             <div class="dropdown">
             <div class="dropbtn"><i class="fa-solid fa-user"></i></div>
                 <div class="dropdown-content">
-                <a href="#">Sign In</a>
-                <a href="#">Register</a>
+                <a href="login">Sign In</a>
+                <a href="register">Register</a>
             </div>
             </div>
             <i class="fa-solid fa-cart-shopping"></i>

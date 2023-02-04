@@ -83,11 +83,11 @@
 		<img class="item" src="<?=ASSETS?>images/products/product10.png">
 		
 	</div>
-	<button type="submit" class="btn btn-success">Discover More !</button>
-</section>
 	
+		<a class="btn btn-success arrival-btn" href="arrival">Discover More !</a>
 	
 </div>
+</section>
 <!-- end new arrival -->
 <!-- start blog -->
 <section id="blog" class="blog container">
