@@ -9,7 +9,7 @@
         <input type="text" name="username" placeholder="username">
         <input type="password" name="password" placeholder="password">
         <button>login</button>
-        <p class="message">Not registered? <a id="ele2" href="http://localhost/SinMkt-market/public/signUp">Create an account</a></p>
+        <p class="message">Not registered? <a id="ele2" href="<?=ROOT?>register">Create an account</a></p>
     </form>
     </div>
 </div>

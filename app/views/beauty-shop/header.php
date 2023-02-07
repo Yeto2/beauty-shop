@@ -31,24 +31,25 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home">Home</a>
+            <a class="nav-link active" aria-current="page" href="<?=ROOT?>home">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="<?=ROOT?>#features">Features</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog</a>
+            <a class="nav-link" href="<?=ROOT?>#blog">Blog</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="contact">Contact</a>
+            <a class="nav-link" href="<?=ROOT?>contact">Contact</a>
         </li>
         <li class="nav-item iii">
         <i class="fa-solid fa-language"></i>
             <div class="dropdown">
             <div class="dropbtn"><i class="fa-solid fa-user"></i></div>
                 <div class="dropdown-content">
-                <a href="login">Sign In</a>
-                <a href="register">Register</a>
+                <a href="<?=ROOT?>login">Sign In</a>
+                <a href="<?=ROOT?>register">Register</a>
+                <a href="<?=ROOT?>upload">Upload</a>
             </div>
             </div>
             <i class="fa-solid fa-cart-shopping"></i>

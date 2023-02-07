@@ -10,7 +10,7 @@
         <input type="password" name="password" placeholder="password">
         <input type="email" name="email" placeholder="email address">
         <button>create</button>
-        <p class="message">Already registered? <a id="ele" href="http://localhost/SinMkt-market/public/login">Sign In</a></p>
+        <p class="message">Already registered? <a id="ele" href="<?=ROOT?>login">Sign In</a></p>
     </form>
     </div>
 </div>
