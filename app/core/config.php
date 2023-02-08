@@ -2,12 +2,12 @@
 
 /*set your website title*/
 
-define('WEBSITE_TITLE', "My Website");
+define('WEBSITE_TITLE', "SHE.");
 
 /*set database variables*/
 
 define('DB_TYPE','mysql');
-define('DB_NAME','mvc_db');
+define('DB_NAME','beauty_shop');
 define('DB_USER','root');
 define('DB_PASS','');
 define('DB_HOST','localhost');

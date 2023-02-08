@@ -4,8 +4,20 @@ class Upload extends Controller{
     
     function index(){
 
-        $data["page_tittle"] = "Upload";
-        $this-> view("beauty-shop/Upload" , $data);
+        header("Location:". ROOT ."upload/product");
+        die;
+    }
+
+    function product(){
+
+        $user = $this->loadModel("user");
+
+    if(!$result = $user->checklogin()){
+
+        header("Location:". ROOT ."login");
+        die;
+    }
+
     }
 
 }

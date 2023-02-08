@@ -13,6 +13,9 @@
         <p class="message">Already registered? <a id="ele" href="<?=ROOT?>login">Sign In</a></p>
     </form>
     </div>
+    <?php
+    show($_POST);
+    ?>
 </div>
 
 <?php $this->view("beauty-shop/footer",$data)?>
