@@ -1,8 +1,11 @@
 <?php $this->view("beauty-shop/header",$data)?>
 
 <div class="section-header">
-					<h2>Login</h2>
-	</div>
+		<h2>Login</h2>
+</div>
+<div class="msg">
+    <?php check_message() ?>
+</div>
 <div class="form-page">
     <div class="form">
     <form class="login-form" id="login" method="post">

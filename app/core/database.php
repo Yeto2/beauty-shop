@@ -32,7 +32,11 @@ class Database
 
 
         if ($check) {
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
+            $data = $stmt->fetchAll(PDO::FETCH_OBJ);
+            if(is_array($data) && count($data) > 0){
+                return $data; 
+            }
+            return false; 
         }else{
             return false;
         }
