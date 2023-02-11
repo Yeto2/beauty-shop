@@ -47,9 +47,20 @@
             <div class="dropdown">
             <div class="dropbtn"><i class="fa-solid fa-user"></i></div>
                 <div class="dropdown-content">
-                <a href="<?=ROOT?>login">Sign In</a>
-                <a href="<?=ROOT?>register">Register</a>
-                <a href="<?=ROOT?>upload">Upload</a>
+                    <b><?php if (isset($_SESSION['user_name'])): ?>
+                        <?="Hello" . $_SESSION['user_name']; ?>
+                    <?php endif; ?></b>
+                    <?php if (!isset($_SESSION['user_name'])): ?>
+                        <a href="<?=ROOT?>login">Sign In</a>
+                        <a href="<?=ROOT?>register">Register</a>
+                    <?php else:?>
+                        <a href="<?=ROOT?>upload">Upload</a>
+                        <div>
+                            <a href="<?=ROOT?>profile">Profile</a>
+                            <a href="<?=ROOT?>logout">Logout</a>
+                        </div>
+                    <?php endif; ?>
+
             </div>
             </div>
             <i class="fa-solid fa-cart-shopping"></i>

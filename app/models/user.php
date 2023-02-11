@@ -14,9 +14,11 @@
                 $data = $DB->read($query,$arr);
                 if(is_array($data)){
                     // logged in
-                    $_SESSION['user_id'] = $data[0]->id;
                     $_SESSION['user_name'] = $data[0]->username;
                     $_SESSION['user_url'] = $data[0]->url_address;
+
+                    header("Location:". ROOT ."home");
+                    die;
                 }else {
                     $_SESSION['error'] = "wrong username or password";
                 }
@@ -54,27 +56,37 @@
         }
 
 
-
-        function checklogin(){
+        function check_login()
+        {
+    
             $DB = new Database();
-
-            if(isset($_SESSION['user_url'])){
-                
+            if(isset($_SESSION['user_url']))
+            {
+    
                 $arr['user_url'] = $_SESSION['user_url'];
-
-                $query = "select * from users where user_url = :user_url limit 1";
+    
+                $query = "select * from users where url_address = :user_url limit 1";
                 $data = $DB->read($query,$arr);
-                if(is_array($data)){
-                    // logged in
-                    $_SESSION['user_id'] = $date[0]->userid;
-                    $_SESSION['user_name'] = $date[0]->username;
-                    $_SESSION['user_url'] = $date[0]->url_address;
-
+                if(is_array($data))
+                {
+                    //logged in
+                        $_SESSION['user_name'] = $data[0]->username;
+                    $_SESSION['user_url'] = $data[0]->url_address;
+    
                     return true;
                 }
             }
+    
             return false;
-            
+    
+        }
+
+        function logout(){
+            unset($_SESSION['user_name']);
+            unset($_SESSION['user_url']);
+
+            header("Location:". ROOT ."login");
+            die;
         }
     }
     

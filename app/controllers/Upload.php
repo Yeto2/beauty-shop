@@ -12,11 +12,13 @@ class Upload extends Controller{
 
         $user = $this->loadModel("user");
 
-    if(!$result = $user->checklogin()){
+    if(!$result = $user->check_login()){
 
         header("Location:". ROOT ."login");
         die;
     }
+    $data["page_tittle"] = "Upload | Furniture";
+        $this-> view("beauty-shop/upload" , $data);
 
     }
 
