@@ -12,7 +12,9 @@
                 <div> 
                 <input name="file" class="subject" type="file" required>
                 </div>
-
+                <div> 
+                <input name="description" class="subject" type="text" required>
+                </div>
                 <div>
                 <input name="price" class="subject" type="text" placeholder="Price" title="Price" required>
                 </div>
