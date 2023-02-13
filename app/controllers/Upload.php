@@ -18,7 +18,7 @@ class Upload extends Controller{
             die;
         }
 
-        if (isset($_POST['tittle']) && isset($_FILES['image'])) {
+        if (isset($_POST['title']) && isset($_FILES['image'])) {
             $upload = $this->loadModel('product');
             $upload->upload($_POST,$_FILES);
         }

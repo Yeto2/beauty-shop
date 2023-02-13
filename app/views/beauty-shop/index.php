@@ -84,7 +84,7 @@
 		
 	</div>
 	
-		<a class="btn btn-success arrival-btn" href="arrival">Discover More !</a>
+		<a class="btn btn-success arrival-btn" href="<?=ROOT?>arrival">Discover More !</a>
 	
 </div>
 </section>
