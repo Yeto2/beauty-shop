@@ -171,6 +171,13 @@ p.dsc {
     color: #565656;
     margin: 0;
     text-align: center;
+    height: 40px;
+    overflow: auto;
+}
+.prod-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 
@@ -332,6 +339,7 @@ section.container {
     width: 360px;
     margin: auto;
 } 
+
 .form {
     position: relative;
     z-index: 0;
