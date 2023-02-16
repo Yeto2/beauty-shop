@@ -41,19 +41,29 @@
                 $arr['email'] = $POST['email'];
                 $arr['url_address'] = generateRandomString(60);
                 $arr['date'] = date("Y-m-d H:i:s");
+                // to check
+                $arr_check['email'] = $POST['email'];
+                $arr_check['username'] = $POST['username'];
 
 
-                $query = "insert into users (username,password,email,url_address,date)values (:username, :password, :email, :url_address, :date)";
-                $data = $DB->write($query,$arr);
-                if($data){
-                    header("Location:". ROOT ."login");
-                    die;
+                // ---------
+                $query_check = "select * from users where username = :username || email = :email";
+                $data_exist = $DB->read($query_check,$arr_check);
+                if(is_array($data_exist)){
+                    $_SESSION['error'] = "email or username are already exist !";
+                }else {
+                    $query = "insert into users (username,password,email,url_address,date)values (:username, :password, :email, :url_address, :date)";
+                        $data = $DB->write($query,$arr);
+                        if($data){
+                            header("Location:". ROOT ."login");
+                            die;
+                        }else {
+                        $_SESSION['error'] = "please enter a valid username and password";
+                    }
                 }
 
-            }else {
-                $_SESSION['error'] = "please enter a valid username and password";
-            }
-        }
+                
+        }}
 
 
         function check_login()

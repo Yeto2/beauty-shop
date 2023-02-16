@@ -3,14 +3,15 @@
     select.form-select {
     margin: 0px 0px 10px;
 }
+
 </style>
         
         <section class="form-page">
-            <div class="msg">
-                <?php check_message() ?>
-            </div>
-            <div class="form">
-                <h4>Upload product</h4>
+        
+        <div class="section-header">
+                    <h2>Upload product</h2>
+        </div>
+        <div class="form">
             <form method="post" enctype="multipart/form-data" name="contactForm" class="customform" method="post">
                 
                 <div > 

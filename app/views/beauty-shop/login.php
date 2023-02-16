@@ -3,9 +3,9 @@
 <div class="section-header">
 		<h2>Login</h2>
 </div>
-<div class="msg">
-    <?php check_message() ?>
-</div>
+
+            <?php check_message() ?>
+
 <div class="form-page">
     <div class="form">
     <form class="login-form" id="login" method="post">

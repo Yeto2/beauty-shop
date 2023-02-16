@@ -391,6 +391,32 @@ section.container {
     text-decoration: none;
 }
 
+/* ---------------------- */
+
+.toastErr {
+    z-index: 2;
+    margin-left: 45px;
+    position: absolute;
+    display: block !important;
+    top: 130px;
+}
+.toastErr {
+    --bs-toast-padding-x: 0.75rem;
+    --bs-toast-padding-y: 0.5rem;
+    --bs-toast-spacing: 1.5rem;
+    --bs-toast-font-size: 0.875rem;
+    --bs-toast-border-radius: var(--bs-border-radius);
+    --bs-toast-box-shadow: var(--bs-box-shadow);
+    --bs-toast-header-color: rgb(31 34 38 / 75%);
+    max-width: 100%;
+    font-size: 0.87rem;
+    background-color: var(--bs-toast-bg);
+    border-radius: 8px;
+}
+.hide{
+    display: none !important;
+}
+
 /*========================================= */
 /* footer */
 .container.footer {

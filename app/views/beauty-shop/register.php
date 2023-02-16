@@ -3,9 +3,7 @@
 <div class="section-header">
 	<h2>Register</h2>
 </div>
-<div class="msg">
-    <?php check_message() ?>
-</div>
+<?php check_message() ?>
 <div class="form-page">
         <div class="form">
     <form class="register-form" id="register" method="post">
@@ -16,9 +14,6 @@
         <p class="message">Already registered? <a id="ele" href="<?=ROOT?>login">Sign In</a></p>
     </form>
     </div>
-    <?php
-    show($_POST);
-    ?>
 </div>
 
 <?php $this->view("beauty-shop/footer",$data)?>

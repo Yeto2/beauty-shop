@@ -58,4 +58,14 @@ function getCount(parent, getChildrensChildren) {
   }
   return relevantChildren;
 }
- console.log("gggg");
+
+
+
+// err section
+let toast = document.querySelector('.toastErr')
+
+function alertFunc() {
+  toast.className += ' hide';
+}
+setTimeout(alertFunc, 5000);
+
