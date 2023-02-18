@@ -58,7 +58,11 @@ function getCount(parent, getChildrensChildren) {
   }
   return relevantChildren;
 }
-
+// upload page redirection
+// document.getElementById("myButton").onclick = function () {
+//   location.href = "www.yoursite.com";
+// };
+// --------------
 
 
 // err section

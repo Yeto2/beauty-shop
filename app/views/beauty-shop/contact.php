@@ -12,9 +12,9 @@
     }
     .con{
         display: flex;
-        justify-content: space-around;
-        margin: 40px 0px;
-    }
+    justify-content: space-around;
+    padding: 60px 0px;
+}
     #nemo {
         width: 370px;
         font-size: 15px;
@@ -30,9 +30,12 @@
         border-radius: 25px;
         : ;
     }
+    textarea {
+    background: #f2f2f2;
+}
 
     .form label,input,textarea{
-    width: 400px;
+    width: 100%;
     box-sizing: border-box;
     font-size: 16px;
 

@@ -22,6 +22,51 @@
     <title>She | <?=$data["page_tittle"]?></title>
 </head>
 <body>
+
+<style>
+    .dropbtn2 {
+  color: #0f0f0f;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content2 {
+  position: absolute;
+  z-index: 98;
+  max-height: 0;
+  min-width: 160px;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+}
+
+.dropdown-content2 a {
+  color: black;
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown2:hover .dropdown-content2 {
+  max-height: 500px;
+  min-width: 160px;
+  transition: max-height 0.25s ease-in;
+}
+
+.dropdown2:hover .dropbtn2 {
+  border-bottom: 1px solid #e0e0e0;
+  transition: max-height 0.25s ease-in;
+}
+
+</style>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
     <a class="navbar-brand" href="#">SHE.</a>
@@ -48,15 +93,21 @@
             <div class="dropbtn"><i class="fa-solid fa-user"></i></div>
                 <div class="dropdown-content">
                     <b><?php if (isset($_SESSION['user_name'])): ?>
-                        <?="Hello" . $_SESSION['user_name']; ?>
                     <?php endif; ?></b>
                     <?php if (!isset($_SESSION['user_name'])): ?>
                         <a href="<?=ROOT?>login">Sign In</a>
                         <a href="<?=ROOT?>register">Register</a>
                     <?php else:?>
-                        <a href="<?=ROOT?>upload">Upload</a>
                         <div>
                             <a href="<?=ROOT?>profile">Profile</a>
+                            <div class="dropdown2">
+                                <button class="dropbtn2" for="btnControl">Upload</button>
+                                <div class="dropdown-content2">
+                                    <a href="<?=ROOT?>upload">Upload Once</a>
+                                    <a href="<?=ROOT?>contact">Upload Multiple</a>
+                                    
+                                </div>
+                            </div>
                             <a href="<?=ROOT?>logout">Logout</a>
                         </div>
                     <?php endif; ?>
