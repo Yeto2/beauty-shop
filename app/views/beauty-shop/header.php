@@ -20,52 +20,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
     <title>She | <?=$data["page_tittle"]?></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
-<style>
-    .dropbtn2 {
-  color: #0f0f0f;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown2 {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content2 {
-  position: absolute;
-  z-index: 98;
-  max-height: 0;
-  min-width: 160px;
-  transition: max-height 0.15s ease-out;
-  overflow: hidden;
-}
-
-.dropdown-content2 a {
-  color: black;
-  background-color: #f9f9f9;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown2:hover .dropdown-content2 {
-  max-height: 500px;
-  min-width: 160px;
-  transition: max-height 0.25s ease-in;
-}
-
-.dropdown2:hover .dropbtn2 {
-  border-bottom: 1px solid #e0e0e0;
-  transition: max-height 0.25s ease-in;
-}
-
-</style>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
@@ -104,7 +62,7 @@
                                 <button class="dropbtn2" for="btnControl">Upload</button>
                                 <div class="dropdown-content2">
                                     <a href="<?=ROOT?>upload">Upload Once</a>
-                                    <a href="<?=ROOT?>contact">Upload Multiple</a>
+                                    <a href="<?=ROOT?>uploadMultiple">Upload Multiple</a>
                                     
                                 </div>
                             </div>

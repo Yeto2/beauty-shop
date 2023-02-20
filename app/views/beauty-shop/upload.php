@@ -35,7 +35,7 @@
                 <input name="price" class="subject" type="text" placeholder="Price" title="Price" required>
                 </div>
                 
-                <div><button type="submit">Add Product</button></div>
+                <div><button type="submit" class="btn btn-success">Add Product</button></div>
             </form>
             </div>           
         </section> 

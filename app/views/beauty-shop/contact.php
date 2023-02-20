@@ -28,7 +28,6 @@
         display: flex;
         flex-direction: column;
         border-radius: 25px;
-        : ;
     }
     textarea {
     background: #f2f2f2;

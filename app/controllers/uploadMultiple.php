@@ -1,10 +1,10 @@
 <?php
 
-class Upload extends Controller{
+class UploadMultiple extends Controller{
     
     function index(){
 
-        header("Location:". ROOT ."upload/product");
+        header("Location:". ROOT ."uploadMultiple/product");
         die;
     }
 
@@ -20,11 +20,11 @@ class Upload extends Controller{
 
         if (isset($_POST['title']) && isset($_FILES['image'])) {
             $upload = $this->loadModel('product');
-            $upload->upload($_POST,$_FILES);
+            $upload->uploadMultiple($_POST,$_FILES);
         }
 
-        $data["page_tittle"] = "Upload";
-        $this-> view("beauty-shop/upload" , $data);
+        $data["page_tittle"] = "Upload Multiple";
+        $this-> view("beauty-shop/uploadMultiple" , $data);
 
     }
 
