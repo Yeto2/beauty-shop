@@ -11,7 +11,7 @@
     <form class="login-form" id="login" method="post">
         <input type="text" name="username" placeholder="username">
         <input type="password" name="password" placeholder="password">
-        <button>login</button>
+        <button class="btn btn-success">login</button>
         <p class="message">Not registered? <a id="ele2" href="<?=ROOT?>register">Create an account</a></p>
     </form>
     </div>

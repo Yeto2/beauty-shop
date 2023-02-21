@@ -73,3 +73,19 @@ function alertFunc() {
 }
 setTimeout(alertFunc, 5000);
 
+
+// ------------ upload multiple
+
+let parent = document.querySelector('#apsection');
+let add = document.querySelector('#add');
+let btndiv = document.querySelector('.subbtn');
+let submit = document.querySelector('#submit');
+
+add.addEventListener('click', function(e){                
+                $('#apsection').prepend ('<div class="form apsection"><div class="twoele"><div> <input name="title[]" class="subject" placeholder="Title" title="Title" type="text" required></div><div><input id="file" name="image[]" class="subject" type="file" required></div><div><input name="price[]" class="subject" type="text" placeholder="Price" title="Price" required></div><div><select style="padding: 12.5px;" name="categories[]" class="form-select" aria-label="Default select example"><option selected Disabled>Categorie</option><option value="clotes">Clotes</option><option value="accessories">Accessories</option><option value="makeup">makeup</option></select></div></div><div> <input name="description[]" class="subject" type="text" placeholder="description" required></div>');
+            if (btndiv.childElementCount < 2 && parent.childElementCount > 1) {
+                $('.subbtn').prepend('<button id="submit" type="submit" class="btn btn-success">Add Products</button>');
+            }
+          
+});
+           
