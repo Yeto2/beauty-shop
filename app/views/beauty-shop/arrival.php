@@ -27,20 +27,7 @@
 	</div>
 	<?php if (is_array($data['posts'])): ?>
 		<div class="prod-list">
-			<div class="products">
-				<div class="product">
-					<img src="<?=ASSETS?>images/products/product1.png" alt="product">
-					<div class="prod-info">
-						<p class="prod-name">alice</p>
-						<p class="dsc">Fujifilm X100T 16 MP Digital Camera (Silver)</p>
-						
-						<div class="price">
-							<p class="new-price">100 $</p>
-							<p class="old-price">200 $</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 			<?php foreach ($data['posts'] as $key):?>
 			<div class="products">
 				<div class="product">

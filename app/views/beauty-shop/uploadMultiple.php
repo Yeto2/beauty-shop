@@ -49,13 +49,14 @@ div#add {
 }
 
 </style>
+        <?php check_message() ?>
         
         <section class="form-page container">
         
             <div class="section-header">
                         <h2>Upload Multiple products</h2>
             </div>
-            <div>
+            <div id="top">
                 <form id="apsection" method="post" enctype="multipart/form-data" name="contactForm[]" class="customform" method="post">
                     <div class="form apsection">
                         <div class="twoele">
@@ -85,12 +86,11 @@ div#add {
             <!-- submit btn -->
                 <div class="subbtn">
                         <!-- <button type="submit" class="btn btn-success">Add Product</button> -->
-                        <div type="submit" id="add" class="btn btn-primary">Add More</div>
+                        <button type="submit" id="add" class="btn btn-primary" href="#top">Add More</button>
                 </div>
                 </form>
             </div>           
         </section>
         
-        <?php show($_FILES) ?>
         
 <?php $this-> view("beauty-shop/footer" , $data); ?>
