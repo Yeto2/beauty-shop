@@ -1,6 +1,15 @@
 <?php $this->view("beauty-shop/header",$data)?>
 <!-- end navbar -->
+<style>
+	.edit > button {
+    margin-left: 10px;
+}
 
+.edit {
+    display: flex;
+    justify-content: flex-end;
+}
+</style>
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
         <img src="..." class="rounded me-2" alt="...">
@@ -31,6 +40,10 @@
 			<?php foreach ($data['posts'] as $key):?>
 			<div class="products">
 				<div class="product">
+				<form class="edit" method="post">
+					<button name="delete" class="btn btn-primary" id="<?=$key->url_address?>"><i class="fa-solid fa-trash"></i></button>
+					<button name="update" class="btn btn-primary" id="<?=$key->url_address?>"><i class="fa-solid fa-pen"></i></button>
+				</form>
 					<img src="<?=ROOT?><?=$key->image?>" alt="product">
 					<div class="prod-info">
 						<p class="prod-name"><?=$key->title?></p>
@@ -47,6 +60,11 @@
 		</div>
 			
 	<?php endif; ?>
+<?php if (isset($_POST['delete'])): ?>
+	<script>
+		console.log('hey beb');
+	</script>
 
+<?php endif; ?>
 </section>
 <?php $this->view("beauty-shop/footer",$data)?>
