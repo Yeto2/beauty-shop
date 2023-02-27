@@ -91,6 +91,20 @@
     
         }
 
+        function get_user(){
+
+            $DB = new Database();
+            $query = "select * from users order by id";
+            $data = $DB->read($query);
+    
+            if(is_array($data)){
+    
+                return $data;
+            }
+    
+            return false;  
+        }
+
         function logout(){
             unset($_SESSION['user_name']);
             unset($_SESSION['user_url']);

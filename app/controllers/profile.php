@@ -6,7 +6,11 @@ class Profile extends Controller{
     
         $data["page_tittle"] = "Profile";
 
-        $this-> view("profile/index" , $data);
+        $user = $this->loadModel('user');
+        $result = $user->get_user();
+        $data["user"] = $result;
+
+        $this-> view("beauty-shop/profile" , $data);
     }
 }
 
