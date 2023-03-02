@@ -49,9 +49,9 @@
                      <li>
                         <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Tables</span></a>
                         <ul class="collapse list-unstyled" id="apps">
-                           <li><a href="email.html">> <span>Email</span></a></li>
-                           <li><a href="calendar.html">> <span>Calendar</span></a></li>
-                           <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
+                           <li><a href="email.html"> <span>Email</span></a></li>
+                           <li><a href="calendar.html"> <span>Calendar</span></a></li>
+                           <li><a href="media_gallery.html"> <span>Media Gallery</span></a></li>
                         </ul>
                      </li>
                      <li><a href="price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>

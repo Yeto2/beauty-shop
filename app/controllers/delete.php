@@ -3,11 +3,16 @@
 class Delete extends Controller{
     
     
-function delete(){
+function index(){
     
-    $product_id = $_GET['id'];
-    $product_model = $this->loadModel('Product');
-    $product_model->delete($product_id);
-    header('Location: /products/list');
+    $product_id = $_POST['id'];
+    $data['$product_id'] = $product_id
+    // $product_model = $this->loadModel('Product');
+    // $product_model->delete($product_id);
+    $this-> view("beauty-shop/tables" , $data);
+
 }
 }
+
+
+?>

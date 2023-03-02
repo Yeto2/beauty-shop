@@ -81,7 +81,7 @@
 	</div>
 <div class="slider" id="slider">
 	
-	<div class="slide" id="slide">
+	<div class="slide prodslide" id="slide">
 		<img class="item" src="<?=ASSETS?>images/products/product1.png">
 		<img class="item" src="<?=ASSETS?>images/products/product2.png">
 		<img class="item" src="<?=ASSETS?>images/products/product3.png">

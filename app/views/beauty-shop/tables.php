@@ -1,11 +1,17 @@
 <?php $this->view("beauty-shop/profileHeader",$data)?>
-
+<style>
+   td img {
+   width: 60px;
+}
+</style>
    <body class="inner_page tables_page">
       <div class="full_container">
          <div class="inner_container">
             <!-- Sidebar  -->
       <?php $this->view("beauty-shop/sidebar",$data)?>
-         
+         <?php if(isset($product_id)): ?>
+         show(data['$product_id']);
+         <?php endif; ?>
             <!-- end sidebar -->
             <!-- right content -->
             <div id="content">
@@ -123,19 +129,21 @@
                                           </tr>
                                        </thead>
                                        <tbody>
+                                          <form method="post">
 			                              <?php foreach ($data['posts'] as $key2):?>
                                           <tr>
                                              <td><?=$key2->id?></td>
-                                             <td><?=$key2->image?></td>
+                                             <td> <img src="<?=$key2->image?>" alt="product"></td>
                                              <td><?=$key2->description?></td>
                                              <td><?=$key2->title?></td>
                                              <td><?=$key2->categories?></td>
                                              <td><?=$key2->date?></td>
                                              <td><?=$key2->price?></td>
-                                             <td>Yes</td>
-                                             <td>Yes</td>
+                                             <td><a class="bbtn" href="<?=ROOT?>update">Update</a></td>
+                                             <td><a class="bbtn" href="<?=ROOT?>delete"  name="id" value="<?=$key2->id?>">delete</a></td>
                                           </tr>
                                        <?php endforeach; ?>
+                                          </form>
                                        </tbody>
                                     </table>
                                  </div>

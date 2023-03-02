@@ -6,7 +6,7 @@ class Controller
         if (file_exists("../app/views/". $view .".php")) {
             include "../app/views/". $view .".php";    
         }else {
-            include "../app/views/404.php";
+            include "../app/views/beauty-shop/error-404.php";
         }
     }
     protected function loadModel($model){

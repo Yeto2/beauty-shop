@@ -106,5 +106,7 @@ function uploadMultiple($POST,$FILES){
 
 }
 
-function delete($id)
+// function delete($id){
+
+// }
 }
