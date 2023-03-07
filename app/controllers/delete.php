@@ -2,17 +2,26 @@
 
 class Delete extends Controller{
     
+    function index(){
+            
+        $data["page_tittle"] = "Table";
+
+        $id = $_GET['id'];
     
-function index(){
-    
-    $product_id = $_POST['id'];
-    $data['$product_id'] = $product_id
-    // $product_model = $this->loadModel('Product');
-    // $product_model->delete($product_id);
-    $this-> view("beauty-shop/tables" , $data);
+        $user = $this->loadModel('user');
+        $result = $user->get_user();
+        $data["user"] = $result;
 
+        $posts = $this->loadModel('posts');
+        $dataproduct = $posts->get_all();
+        $data["posts"] = $dataproduct;
+
+
+        // -----
+
+        $product_model = $this->loadModel('product');
+        $product_model->delete($id);
+        $this-> view("beauty-shop/tables" , $data);
+    }
 }
-}
-
-
 ?>

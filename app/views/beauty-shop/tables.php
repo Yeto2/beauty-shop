@@ -129,7 +129,7 @@
                                           </tr>
                                        </thead>
                                        <tbody>
-                                          <form method="post">
+                                          <form method="get">
 			                              <?php foreach ($data['posts'] as $key2):?>
                                           <tr>
                                              <td><?=$key2->id?></td>
@@ -139,8 +139,8 @@
                                              <td><?=$key2->categories?></td>
                                              <td><?=$key2->date?></td>
                                              <td><?=$key2->price?></td>
-                                             <td><a class="bbtn" href="<?=ROOT?>update">Update</a></td>
-                                             <td><a class="bbtn" href="<?=ROOT?>delete"  name="id" value="<?=$key2->id?>">delete</a></td>
+                                             <td><a class="btn btn-primary" href="<?=ROOT?>update?id=<?=$key2->id?>">Update</a></td>
+                                             <td><a class="btn btn-danger" href="<?=ROOT?>delete?id=<?=$key2->id?>"  name="id" >delete</a></td>
                                           </tr>
                                        <?php endforeach; ?>
                                           </form>

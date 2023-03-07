@@ -106,7 +106,9 @@ function uploadMultiple($POST,$FILES){
 
 }
 
-// function delete($id){
-
-// }
+function delete($id){
+    $DB = new Database();
+    $query = "delete from products where id = $id";
+    $data = $DB->read($query);
+}
 }
