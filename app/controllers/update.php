@@ -4,7 +4,7 @@ class Update extends Controller{
     
     function index(){
 
-        header("Location:". ROOT ."upload/product");
+        header("Location:". ROOT ."update/product");
         die;
     }
 
