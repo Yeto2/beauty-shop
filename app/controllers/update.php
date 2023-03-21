@@ -17,10 +17,11 @@ class Update extends Controller{
             header("Location:". ROOT ."login");
             die;
         }
-
-        if (isset($_POST['title']) && isset($_FILES['image'])) {
-            $upload = $this->loadModel('product');
-            $upload->upload($_POST,$_FILES);
+        if (isset($_POST['update_product'])) {
+            
+            $update = $this->loadModel('product');
+            $update->updateProduct($_POST,$_FILES);
+            // header('Location: index.php');
         }
 
         $data["page_tittle"] = "Update";

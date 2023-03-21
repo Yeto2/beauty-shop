@@ -112,9 +112,10 @@ Class Product{
         $data = $DB->read($query);
     }
 
-    function delete($id){
+    function updateProduct($data) {
         $DB = new Database();
-        $query = "delete from products where id = $id";
-        $data = $DB->read($query);
+        $query = "update products set name = :name, description = :description, price = :price WHERE id = :id";
+        $data = $DB->write($query);
+        
     }
 }
