@@ -15,7 +15,19 @@ Class Posts{
 
         return false;  
     }
+    function get_once(){
 
+        $DB = new Database();
+        $query = "select * from products where id = :id limit 1";
+        $data = $DB->read($query);
+
+        if(is_array($data)){
+
+            return $data;
+        }
+
+        return false;  
+    }
 
 
 }

@@ -1,55 +1,61 @@
 <?php $this-> view("beauty-shop/header" , $data); ?>
 <style>
-    select.form-select {
-    margin: 0px 0px 10px;
+        select.form-select {
+        margin: 0px 0px 10px;
+        }
+        .form {
+        max-width: none !important;
+        }
+        .form-page {
+        width: unset;
+        }
+        #file{
+            padding: 12px !important;
+        }
+        .twoele {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    .form {
-    max-width: none !important;
+    .subbtn {
+        display: flex;
+        justify-content: flex-end;
     }
-    .form-page {
-    width: unset;
+    .form button {
+        width: unset;
     }
-    #file{
-        padding: 12px !important;
+    .twoele div {
+        width: 100%;
     }
-    .twoele {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.subbtn {
-    display: flex;
-    justify-content: flex-end;
-}
-.form button {
-    width: unset;
-}
-.twoele div {
-    width: 100%;
-}
-.twoele div:not(:first-child) {
-    padding-left: 20px;
-}
-.form{
-    padding: 30px;
-    margin-bottom: 0px !important;
+    .twoele div:not(:first-child) {
+        padding-left: 20px;
+    }
+    .form{
+        padding: 30px;
+        margin-bottom: 0px !important;
 
-}
-button {
-    margin-left: 5px;
-}
-.apsection{
-    margin-bottom: 25px !important;
-}
-.subbtn {
-    margin-bottom:100px !important;
-}
-div#add {
-    margin-left: 20px;
-}
+    }
+    button {
+        margin-left: 5px;
+    }
+    .apsection{
+        margin-bottom: 25px !important;
+    }
+    .subbtn {
+        margin-bottom:100px !important;
+    }
+    div#add {
+        margin-left: 20px;
+    }
 
 </style>
         <?php check_message() ?>
+        <h1>
+            <?php 
+            // echo[data['id']];
+            show($_GET['id']);
+            ?>
+        </h1>
         
         <section class="form-page container">
         
