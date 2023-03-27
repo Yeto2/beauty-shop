@@ -1,102 +1,72 @@
 <?php $this-> view("beauty-shop/header" , $data); ?>
 <style>
-        select.form-select {
-        margin: 0px 0px 10px;
-        }
-        .form {
-        max-width: none !important;
-        }
-        .form-page {
-        width: unset;
-        }
-        #file{
-            padding: 12px !important;
-        }
-        .twoele {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .subbtn {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .form button {
-        width: unset;
-    }
-    .twoele div {
-        width: 100%;
-    }
-    .twoele div:not(:first-child) {
-        padding-left: 20px;
-    }
-    .form{
-        padding: 30px;
-        margin-bottom: 0px !important;
-
-    }
-    button {
-        margin-left: 5px;
-    }
-    .apsection{
-        margin-bottom: 25px !important;
-    }
-    .subbtn {
-        margin-bottom:100px !important;
-    }
-    div#add {
-        margin-left: 20px;
-    }
+    select.form-select {
+    margin: 0px 0px 10px;
+}
 
 </style>
-        <?php check_message() ?>
-        <h1>
-            <?php 
-            // echo[data['id']];
-            show($_GET['id']);
-            ?>
-        </h1>
         
-        <section class="form-page container">
+        <section class="form-page">
         
-            <div class="section-header">
-                        <h2>Upload Multiple products</h2>
-            </div>
-            <div id="top">
-                <form id="apsection" method="post" enctype="multipart/form-data" name="contactForm[]" class="customform" method="post">
-                    <div class="form apsection">
-                        <div class="twoele">
-                            <div> 
-                                <input name="title[]" class="subject" placeholder="Title" title="Title" type="text" required>
-                            </div>
-                            <div> 
-                                <input id="file" name="image[]" class="subject" type="file" required>
-                            </div>
-                            <div>
-                                <input name="price[]" class="subject" type="text" placeholder="Price" title="Price" required>
-                            </div>
-                            <div>
-                                <select style="padding: 12.5px;" name="categories[]" class="form-select" aria-label="Default select example">
-                                    <option selected Disabled>Categorie</option>
-                                    <option value="clotes">Clotes</option>
-                                    <option value="accessories">Accessories</option>
-                                    <option value="makeup">makeup</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div> 
-                            <input name="description[]" class="subject" type="text" placeholder="description" required>
-                        </div>
-                    </div>
+        <div class="section-header">
+                    <h2>Upload product</h2>
+        </div>
+        <div class="form">
+            <form method="post" enctype="multipart/form-data" name="contactForm" class="customform" method="post">
+            <?php foreach ($data['posts'] as $key3):?>
                 
-            <!-- submit btn -->
-                <div class="subbtn">
-                        <!-- <button type="submit" class="btn btn-success">Add Product</button> -->
-                        <button type="submit" id="add" class="btn btn-primary" href="#top">Add More</button>
+                <div > 
+                <input name="title" class="subject" placeholder="Title" title="Title" value="<?=$key3->title?>" type="text" required>
                 </div>
-                </form>
+                <div> 
+                <input name="image" class="subject" type="file" value="<?=$key3->image?>" required>
+                </div>
+                <div> 
+                <input name="description" class="subject" type="text" placeholder="description" value="<?=$key3->description?>" required>
+                </div>
+                <div>
+                    <select name="categories" class="form-select" aria-label="Default select example">
+                        <option selected Disabled>Categorie</option>
+                        <option value="clotes">Clotes</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="makeup">makeup</option>
+                    </select>
+                </div>
+                <div>
+                <input name="price" class="subject" type="text" placeholder="Price" title="Price" required>
+                </div>
+                
+                <div><button type="submit" class="btn btn-success">Add Product</button></div>
+                <?php endforeach; ?>
+            </form>
             </div>           
-        </section>
-        
-        
+        </section> 
+    
 <?php $this-> view("beauty-shop/footer" , $data); ?>
+
+                            <?php foreach ($data['posts'] as $key3):?>
+                                <div class="twoele">
+                                    <div> 
+                                        <input name="title" class="subject" placeholder="Title" title="Title" type="text" value="<?=$key3->title?>" required>
+                                    </div>
+                                    <div> 
+                                        <input id="file" name="image" class="subject" type="file" value="<?=$key3->image?>" required>
+                                    </div>
+                                    <div>
+                                        <input name="price" class="subject" type="text" placeholder="Price" title="Price" value="<?=$key3->price?>" required>
+                                    </div>
+                                    <div>
+                                        <select style="padding: 12.5px;" name="categories" class="form-select" aria-label="Default select example">
+                                            <option selected Disabled>Categorie</option>
+                                            <option value="clotes">Clotes</option>
+                                            <option value="accessories">Accessories</option>
+                                            <option value="makeup">makeup</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div> 
+                                    <input name="description" class="subject" type="text" placeholder="description" value="<?=$key3->description?>" required>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    

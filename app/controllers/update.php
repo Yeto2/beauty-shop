@@ -20,7 +20,7 @@ class Update extends Controller{
 
         // ----- get products data 
             $posts = $this->loadModel('posts');
-            $dataproduct = $posts->get_all();
+            $dataproduct = $posts->get_once($_GET['id']);
             $data["posts"] = $dataproduct;
 
 
@@ -31,7 +31,7 @@ class Update extends Controller{
             }
 
             $data["page_tittle"] = "Update";
-            $this-> view("beauty-shop/upload" , $data);
+            $this-> view("beauty-shop/update" , $data);
 
     }
 
