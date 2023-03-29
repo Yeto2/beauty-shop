@@ -25,7 +25,7 @@
                 <input name="description" class="subject" type="text" placeholder="description" value="<?=$key3->description?>" required>
                 </div>
                 <div>
-                    <select name="categories" class="form-select" aria-label="Default select example">
+                    <select name="categories" class="form-select" value="images/products<?=$key3->categories?>" aria-label="Default select example">
                         <option selected Disabled>Categorie</option>
                         <option value="clotes">Clotes</option>
                         <option value="accessories">Accessories</option>
@@ -33,15 +33,15 @@
                     </select>
                 </div>
                 <div>
-                <input name="price" class="subject" type="text" placeholder="Price" title="Price" required>
+                <input name="price" class="subject" type="text" placeholder="Price" title="Price" value="<?=$key3->price?>" required>
                 </div>
                 
                 <div><button type="submit" class="btn btn-success">Add Product</button></div>
+                
                 <?php endforeach; ?>
             </form>
             </div>           
         </section> 
-    
 <?php $this-> view("beauty-shop/footer" , $data); ?>
 
                             <?php foreach ($data['posts'] as $key3):?>
