@@ -18,8 +18,24 @@
                 <div > 
                 <input name="title" class="subject" placeholder="Title" title="Title" value="<?=$key3->title?>" type="text" required>
                 </div>
-                <div> 
-                <input name="image" class="subject" type="file" value="<?=$key3->image?>" required>
+                <div class="ll"> 
+                    <style>
+                        input.subject.bb {
+                        width: 122px;
+                        padding: 0px;
+                        margin: 20px;
+                    }
+                    .ll {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+                    .old-img {
+                        width: 70px;
+                    }
+                    </style>
+                <input name="image" class="subject bb" type="file" value="<?=$key3->image?>" required>
+                <img src="<?=ROOT?><?=$key3->image?>" alt="old" class="old-img">
                 </div>
                 <div> 
                 <input name="description" class="subject" type="text" placeholder="description" value="<?=$key3->description?>" required>
